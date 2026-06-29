@@ -1,12 +1,11 @@
-````markdown
 # Diagapeyev-Cipher-Solver
 
 This repository contains the computational framework, source code, and experimental logs used in the following research paper.
 
 ## Paper Information
 
-**Title**: On Heuristic Structure Extraction in Under-Specified Transposition Ciphers: A Case Study on the Diagapeyev Cipher  
-**Author**: Takumi Ichikawa  
+**Title**: On Heuristic Structure Extraction in Under-Specified Transposition Ciphers: A Case Study on the Diagapeyev Cipher
+**Author**: Takumi Ichikawa
 **DOI**: [10.5281/zenodo.21022129](https://doi.org/10.5281/zenodo.21022129)
 
 ## Project Overview
@@ -20,7 +19,7 @@ This project applies a heuristic optimization framework to the Diagapeyev Cipher
 ├── src/      # Python source code used for decryption experiments
 ├── logs/     # Decryption logs for each phase and matrix configurations corresponding to peak scores
 └── data/     # Cryptograms and datasets used in the experiments
-````
+```
 
 ## Usage
 
@@ -60,6 +59,3 @@ The following 6×6 matrix yielded the highest log-score (15.84) observed during 
 ## License
 
 This repository is provided for research purposes to ensure the reproducibility and verification of the reported results.
-
-```
-```
