@@ -15,7 +15,15 @@ This project applies a heuristic optimization framework to the Diagapeyev Cipher
 - `/logs`: Decryption logs for each phase and matrix configurations corresponding to peak scores.
 - `/data`: Cryptograms and datasets used in the experiments.
 
-## Experimental Results (Highest Score)
+## Usage
+To run the decryption script and verify the heuristic structure extraction:
+
+```bash
+python src/solver.py
+
+This script implements the decryption logic using a 6x6 Straddling Checkerboard, utilizing a cycle of keys (30, 40) to extract the underlying structure.
+
+Experimental Results (Highest Score)
 The following 6x6 matrix yielded the highest log-score (15.84) observed during our heuristic search.
 
 | Row | 1 | 2 | 3 | 4 | 5 | 6 |
