@@ -1,4 +1,5 @@
 # Diagapeyev-Cipher-Solver
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21022129.svg)](https://doi.org/10.5281/zenodo.21022129)
 
 This repository contains the computational framework, source code, and experimental logs used in the following research paper.
 
