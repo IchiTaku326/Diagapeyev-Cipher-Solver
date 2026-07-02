@@ -11,12 +11,13 @@ This repository contains the computational framework, source code, and experimen
 
 ## Paper Information
 
-**Title**: On Heuristic Structure Extraction in Under-Specified Transposition Ciphers: A Case Study on the Diagapeyev Cipher  
-**Author**: Takumi Ichikawa  
-**Version**: 1.1.0 (July 2026)  
-
-**DOI (Current Version)**: [10.5281/zenodo.21022129](https://doi.org/10.5281/zenodo.21022129)  
-**DOI (Concept/Latest)**:  [10.5281/zenodo.21022128](https://doi.org/10.5281/zenodo.21022128) *(Always resolves to the latest version)*
+| | |
+|---|---|
+| **Title** | *On Heuristic Structure Extraction in Under-Specified Transposition Ciphers: A Case Study on the Diagapeyev Cipher* |
+| **Author** | Takumi Ichikawa |
+| **Version** | 1.1.0 (July 2026) |
+| **DOI (Current Version)** | [10.5281/zenodo.21022129](https://doi.org/10.5281/zenodo.21022129) |
+| **DOI (Concept/Latest)** | [10.5281/zenodo.21022128](https://doi.org/10.5281/zenodo.21022128) *(Always resolves to the latest version)* |
 
 ## Project Overview
 
