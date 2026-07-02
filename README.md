@@ -11,8 +11,6 @@ This repository contains the computational framework, source code, and experimen
 
 ## Paper Information
 
-## Paper Information
-
 **Title**  
 *On Heuristic Structure Extraction in Under-Specified Transposition Ciphers: A Case Study on the Diagapeyev Cipher*
 
