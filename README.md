@@ -1,3 +1,8 @@
+## 📝 Explanatory Article
+For a high-level conceptual overview, methodology breakdown, and visualization of the heuristic search process, check out the official explanatory article on Medium:
+
+👉 **[Decrypting the Diagapeyev Cipher: A Heuristic Approach to Under-Specified Transposition](https://medium.com/@takumiichikawa3126/the-diagapeyev-cipher-has-remained-an-unresolved-cryptographic-puzzle-for-over-eight-decades-7dd805764b8e)**
+
 # Diagapeyev-Cipher-Solver
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21022129.svg)](https://doi.org/10.5281/zenodo.21022129)
 
