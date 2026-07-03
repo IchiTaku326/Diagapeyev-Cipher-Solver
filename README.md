@@ -92,4 +92,4 @@ This repository is provided for research purposes to ensure the reproducibility 
 
 If you use this research or code in your work, please cite it as follows:
 
-> Ichikawa, T. (2026). *On Heuristic Structure Extraction in Under-Specified Transposition Ciphers: A Case Study on the Diagapeyev Cipher* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21022129
+> Ichikawa, T. (2026). *On Heuristic Structure Extraction in Under-Specified Transposition Ciphers: A Case Study on the Diagapeyev Cipher* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21132297
