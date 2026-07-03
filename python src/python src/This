@@ -6,6 +6,8 @@ For a high-level conceptual overview, methodology breakdown, and visualization o
 
 # Diagapeyev-Cipher-Solver
 
+> A reproducible computational framework for heuristic analysis of the unsolved Diagapeyev Cipher (1939).
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21022129.svg)](https://doi.org/10.5281/zenodo.21022129)
 
 This repository contains the computational framework, source code, and experimental logs used in the following research paper.
@@ -33,11 +35,28 @@ https://doi.org/10.5281/zenodo.21022128 *(Always resolves to the latest version)
 
 ## Project Overview
 
-This project applies a heuristic optimization framework to the Diagapeyev Cipher, investigating structural extraction methods. The repository provides the source code, datasets, and experimental logs required to reproduce the computational experiments described in the accompanying paper.
+The Diagapeyev Cipher is an unsolved transposition cipher first published in 1939. More than 80 years later, no publicly verified key, encryption procedure, or authoritative plaintext has been established.
 
-The primary objective is not to claim a definitive historical decryption, but to demonstrate that meaningful linguistic structures can emerge from an optimization-driven search over under-specified transposition parameters.
+This project applies a heuristic optimization framework to investigate the structural properties of the cipher through computational search. Rather than claiming a definitive historical decryption, the objective is to demonstrate that statistically meaningful linguistic structures can emerge from optimization over under-specified transposition parameters.
+
+The repository provides the source code, datasets, optimization logs, and documentation required to reproduce every computational experiment described in the accompanying paper.
 
 ---
+
+## Original Ciphertext
+
+The original Diagapeyev Cipher consists solely of the following numerical ciphertext. This ciphertext serves as the sole input to all experiments presented in this repository.
+
+```text
+75628 28591 62916 48164 91748 58464 74748 28483 81638 18174
+74826 26475 83828 49175 74658 37575 75936 36565 81638 17585
+75756 46282 92857 46382 75748 38165 81848 56485 64858 56382
+72628 36281 81728 16463 75828 16483 63828 58163 63630 47481
+91918 46385 84656 48565 62946 26285 91859 17491 72756 46575
+71658 36264 74818 28462 82649 18193 65626 48484 91838 57491
+81657 27483 83858 28364 62726 26562 83759 27263 82827 27283
+82858 47582 81837 28462 82837 58164 75748 58162 92000
+```
 
 ## Contents
 
@@ -54,7 +73,7 @@ The primary objective is not to claim a definitive historical decryption, but to
 
 ### 1. Basic Decryption
 
-Run the main decoder:
+Run the main decoding program:
 
 ```bash
 python src/solver.py
@@ -91,7 +110,7 @@ The following 6×6 matrix achieved the highest log-score (**15.84**) during the 
 
 ## Generated Candidate Plaintext
 
-Using the highest-scoring matrix configuration, the decoding framework produced the following candidate plaintext:
+Using the original ciphertext together with the highest-scoring 6×6 matrix configuration, the decoding framework produced the following candidate plaintext:
 
 ```text
 ВОВ: БОЕВАЯ ЗАДАЧА УСТАНОВЛЕНА,
@@ -99,7 +118,7 @@ Using the highest-scoring matrix configuration, the decoding framework produced 
 СЕКТОР А.
 ```
 
-This represents the best-scoring reconstruction obtained during the optimization process. The output is presented as a **heuristically generated candidate plaintext** and should not be interpreted as a confirmed historical decryption.
+This represents the highest-scoring reconstruction obtained during the optimization process. The output is presented as a **heuristically generated candidate plaintext** and should not be interpreted as a confirmed historical decryption.
 
 ---
 
@@ -115,9 +134,15 @@ These fragments exhibit strong linguistic consistency according to the trigram l
 
 ---
 
+## Reproducibility
+
+All source code, datasets, optimization logs, and the accompanying paper are publicly available so that every experiment reported in this repository can be independently reproduced and verified.
+
+Researchers can reproduce the reported candidate plaintext by executing `src/solver.py` together with the optimization framework included in this repository.
+
 ## License
 
-This repository is provided for research purposes to ensure reproducibility and independent verification of the reported computational results.
+This repository is provided for research and educational purposes.
 
 ---
 
@@ -126,3 +151,11 @@ This repository is provided for research purposes to ensure reproducibility and 
 If you use this research or code in your work, please cite it as follows:
 
 > Ichikawa, T. (2026). *On Heuristic Structure Extraction in Under-Specified Transposition Ciphers: A Case Study on the Diagapeyev Cipher* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21132297
+
+---
+
+## Acknowledgements
+
+The Diagapeyev Cipher remains an open problem in classical cryptanalysis.
+
+This repository is intended as an open and reproducible research project. Contributions, discussion, independent verification, and alternative approaches are welcome.
