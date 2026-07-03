@@ -8,7 +8,7 @@ For a high-level conceptual overview, methodology breakdown, and visualization o
 
 > A reproducible computational framework for heuristic analysis of the unsolved Diagapeyev Cipher (1939).
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21022129.svg)](https://doi.org/10.5281/zenodo.21022129)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21022129.svg)](https://zenodo.org/records/21132297)
 
 This repository contains the computational framework, source code, and experimental logs used in the following research paper.
 
