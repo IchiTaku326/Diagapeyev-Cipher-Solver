@@ -281,7 +281,6 @@ Applying the highest-scoring checkerboard to the original ciphertext produced th
 ВОВ: БОЕВАЯ ЗАДАЧА УСТАНОВЛЕНА,
 ПОДРАЗДЕЛЕНИЯМ НАЧАТЬ ДВИЖЕНИЕ В
 СЕКТОР А.
-
 ```
 
 This represents the strongest candidate plaintext identified during the optimization process.
