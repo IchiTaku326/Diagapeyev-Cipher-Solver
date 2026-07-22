@@ -136,7 +136,7 @@ These outputs are presented as **heuristically generated candidate plaintexts** 
 The table below illustrates the decoding process for the first ten numerical pairs.
 
 | Position | Raw Pair | Key Offset | Target Coordinate | Mapped Character | Partial Phrase |
-|:-------:|:--------:|:----------:|:----------------:|:----------------:|---------------|
+|:--------:|:--------:|:----------:|:-----------------:|:----------------:|----------------|
 | 1 | **75** | −30 | **45** | **В** | В |
 | 2 | **62** | −40 | **22** | **О** | ВО |
 | 3 | **82** | −30 | **52** | **В** | ВОВ |
@@ -148,11 +148,21 @@ The table below illustrates the decoding process for the first ten numerical pai
 | 9 | **82** | −30 | **52** | **Я** | ВОВ БОЕВАЯ |
 | 10 | **84** | −40 | **44** | **З** | ВОВ БОЕВАЯ З |
 
+> **💡 Note on Full Ciphertext Trace**
+>
+> While the table above illustrates only the first ten numerical pairs for clarity, the complete, unedited mapping from the original ciphertext to the final candidate plaintext is fully documented in:
+>
+> ```text
+> logs/full_decryption_mapping.md
+> ```
+>
+> This file contains the entire decoding trace and enables independent verification of every mapped character produced by the framework.
+
 The first reconstructed phrase naturally develops into:
 
 > **ВОВ: БОЕВАЯ ЗАДАЧА ...**
 
-This progression illustrates how linguistic structure gradually emerges through heuristic optimization.
+This progression illustrates how coherent linguistic structure gradually emerges through heuristic optimization.
 
 ---
 
@@ -168,19 +178,20 @@ The repository is organized as follows:
 │   └── auxiliary datasets
 │
 ├── logs/
-│   ├── optimization logs
-│   ├── best candidate matrices
-│   └── score history
+│   ├── optimization_logs/
+│   ├── best_candidate_matrices/
+│   ├── score_history/
+│   └── full_decryption_mapping.md
 │
 ├── src/
 │   ├── solver.py
 │   ├── optimizer.py
 │   ├── checkerboard.py
 │   ├── scoring.py
-│   └── utilities
+│   └── utilities/
 │
 ├── paper/
-│   └── research paper
+│   └── research_paper.pdf
 │
 └── README.md
 ```
@@ -203,11 +214,11 @@ The solver performs the complete reconstruction pipeline using:
 
 - 5-digit radio formatting removal
 - 2-digit parsing
-- alternating key subtraction (30 / 40)
-- the current checkerboard configuration
+- Alternating key subtraction (30 / 40)
+- Checkerboard coordinate mapping
 - Russian language scoring
 
-The resulting output is a candidate plaintext generated under the selected checkerboard.
+The resulting output is a candidate plaintext generated under the selected checkerboard configuration.
 
 ---
 
@@ -239,9 +250,9 @@ The optimization procedure evaluated a large number of candidate checkerboard co
 
 Among the tested matrices, the following configuration achieved the highest language-model score reported in the accompanying paper.
 
-**Highest Log-Score**
+## Highest Log-Score
 
-```
+```text
 15.84
 ```
 
@@ -250,7 +261,7 @@ Among the tested matrices, the following configuration achieved the highest lang
 # Highest-Scoring Checkerboard
 
 | Row | 1 | 2 | 3 | 4 | 5 | 6 |
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **1** | Г | Я | Ж | Ю | Ц | — |
 | **2** | Э | С | Ч | К | З | — |
 | **3** | Ф | Н | П | Ы | Л | — |
@@ -277,13 +288,13 @@ Applying the highest-scoring checkerboard to the original ciphertext produced th
 
 This represents the strongest candidate plaintext identified during the optimization process.
 
-It is presented as a **heuristically generated reconstruction** and **should not be interpreted as a confirmed historical decryption**.
+It is presented as a **heuristically generated candidate reconstruction** and **should not be interpreted as a confirmed historical decryption**.
 
 ---
 
 # Observed Linguistic Fragments
 
-Several statistically coherent Russian expressions consistently emerge among the highest-scoring candidates.
+Several statistically coherent Russian expressions consistently emerge among the highest-scoring candidate reconstructions.
 
 Examples include:
 
@@ -299,21 +310,25 @@ Examples include:
 
 > **СЕКТОР А**
 
-These fragments exhibit strong agreement with Russian trigram statistics and contribute significantly to the optimization score.
+These fragments exhibit strong agreement with Russian trigram statistics and contribute significantly to the overall language-model score.
 
-Although this does **not** constitute proof of the historical plaintext, it demonstrates that meaningful linguistic structures can emerge from heuristic optimization over an under-specified transposition system.
+Although this does **not** constitute proof of the historical plaintext, it demonstrates that meaningful linguistic structures can emerge through heuristic optimization over an under-specified transposition system.
 
 ---
 
 # Discussion
 
-Unlike conventional cryptanalysis, this project does not assume prior knowledge of the original checkerboard or encryption key.
+Unlike conventional cryptanalysis, this project does not assume prior knowledge of:
 
-Instead, the reconstruction is driven entirely by statistical optimization guided by Russian language models.
+- the original checkerboard,
+- the encryption key,
+- or the original plaintext.
+
+Instead, reconstruction is driven entirely by statistical optimization guided by Russian language models.
 
 The framework demonstrates that optimization over a large search space can recover highly structured linguistic candidates from an otherwise under-specified cipher.
 
-Consequently, the project should be viewed primarily as a computational investigation into heuristic structure extraction rather than as a claim of definitive historical decryption.
+Accordingly, this project should be regarded primarily as a computational investigation into heuristic structure extraction rather than as a claim of definitive historical decryption.
 
 ---
 
@@ -339,7 +354,7 @@ python src/solver.py
 python src/optimizer.py
 ```
 
-The optimization logs included in the `logs/` directory correspond to the experiments discussed in the paper and allow independent verification of the reported results.
+The optimization logs contained in the `logs/` directory correspond to the experiments discussed in the accompanying paper and enable independent verification of the reported results.
 
 ---
 
@@ -347,18 +362,18 @@ The optimization logs included in the `logs/` directory correspond to the experi
 
 This repository **does not claim to have conclusively solved** the Diagapeyev Cipher.
 
-Instead, it presents a reproducible heuristic framework demonstrating that statistically meaningful linguistic structures can emerge from optimization over an under-specified transposition cipher.
+Instead, it presents a reproducible heuristic framework demonstrating that statistically meaningful linguistic structures can emerge through optimization over an under-specified transposition cipher.
 
-The generated plaintext should therefore be interpreted as a **heuristically generated candidate reconstruction**, not as a historically verified decryption.
+The generated plaintext should therefore be interpreted as a **heuristically generated candidate reconstruction**, **not** as a historically verified decryption.
 
-Future work may incorporate:
+Future work may include:
 
 - Alternative language models
-- Additional optimization strategies
 - Simulated annealing
 - Evolutionary algorithms
 - Bayesian optimization
 - Alternative checkerboard structures
+- Additional optimization strategies
 - Independent verification by other researchers
 
 ---
@@ -371,9 +386,13 @@ If you use this repository, software, dataset, or accompanying paper in your res
 
 ```text
 Ichikawa, T. (2026).
-On Heuristic Structure Extraction in Under-Specified Transposition
-Ciphers: A Case Study on the Diagapeyev Cipher (Version 3).
+
+On Heuristic Structure Extraction in Under-Specified
+Transposition Ciphers:
+A Case Study on the Diagapeyev Cipher (Version 3).
+
 Zenodo.
+
 https://doi.org/10.5281/zenodo.21484792
 ```
 
@@ -415,7 +434,7 @@ See the `LICENSE` file for complete licensing information.
 
 # Acknowledgements
 
-The **Diagapeyev Cipher** remains one of the long-standing unsolved problems in classical cryptanalysis.
+The Diagapeyev Cipher remains one of the long-standing unsolved problems in classical cryptanalysis.
 
 This repository is intended as an **open**, **transparent**, and **fully reproducible** research project.
 
@@ -426,31 +445,35 @@ Contributions are welcome, including:
 - Improved language models
 - Performance improvements
 - Bug reports
-- Documentation enhancements
+- Documentation improvements
 
 Constructive discussion and collaboration are greatly appreciated.
 
 ---
 
-## Contact
+# Contact
 
-Questions, suggestions, or collaboration proposals are welcome through GitHub Issues or Pull Requests.
+Questions, suggestions, bug reports, or collaboration proposals are welcome through **GitHub Issues** or **Pull Requests**.
 
 ---
 
-## Repository Goals
+# Repository Goals
 
 This project aims to provide:
 
 - A reproducible computational framework
-- Open-source implementation of the proposed methodology
+- An open-source implementation of the proposed methodology
 - Transparent experimental procedures
 - Publicly accessible datasets
 - Complete optimization logs
-- Independent verification of all reported experiments
+- Independent verification of every reported experiment
 
 By making every component of the workflow publicly available, this repository encourages further research on the Diagapeyev Cipher and on heuristic approaches to classical cryptanalysis.
 
 ---
 
-**If you find this project useful, please consider giving the repository a ⭐ on GitHub.**
+## ⭐ Support the Project
+
+If you find this project useful, please consider giving the repository a **⭐ Star** on GitHub.
+
+Your support helps increase the visibility of open and reproducible research in classical cryptanalysis.
