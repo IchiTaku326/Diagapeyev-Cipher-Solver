@@ -236,7 +236,5 @@ This file documents the complete, step-by-step trace of the entire **Diagapeyev 
 ```text
 ВОВ:
 БОЕВАЯ ЗАДАЧА УСТАНОВЛЕНА,
-
 ПОДРАЗДЕЛЕНИЯМ НАЧАТЬ ДВИЖЕНИЕ В
-
 СЕКТОР А.
