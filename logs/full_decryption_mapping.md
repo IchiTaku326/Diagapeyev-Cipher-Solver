@@ -234,7 +234,6 @@ This file documents the complete, step-by-step trace of the entire **Diagapeyev 
 ## 4. Final Reconstructed Plaintext
 
 ```text
-ВОВ:
-БОЕВАЯ ЗАДАЧА УСТАНОВЛЕНА,
+ВОВ:БОЕВАЯ ЗАДАЧА УСТАНОВЛЕНА,
 ПОДРАЗДЕЛЕНИЯМ НАЧАТЬ ДВИЖЕНИЕ В
 СЕКТОР А.
