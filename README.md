@@ -278,12 +278,10 @@ This checkerboard produced the highest overall statistical score during the heur
 Applying the highest-scoring checkerboard to the original ciphertext produced the following reconstruction.
 
 ```text
-ВОВ:
-БОЕВАЯ ЗАДАЧА УСТАНОВЛЕНА,
-
+ВОВ: БОЕВАЯ ЗАДАЧА УСТАНОВЛЕНА,
 ПОДРАЗДЕЛЕНИЯМ НАЧАТЬ ДВИЖЕНИЕ В
-
 СЕКТОР А.
+
 ```
 
 This represents the strongest candidate plaintext identified during the optimization process.
